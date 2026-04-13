@@ -1,0 +1,43 @@
+## LaTeX auxiliary files (recursive)
+**/*.aux
+**/*.lof
+**/*.log
+**/*.lot
+**/*.fls
+**/*.out
+**/*.toc
+**/*.fmt
+**/*.fot
+**/*.cb
+**/*.cb2
+
+## Python/Word Converter temporary files
+**/*.tmp.docx
+**/_temp_img_*
+**/__pycache__/
+
+## Intermediate documents
+**/*.dvi
+**/*.xdv
+**/*-converted-to.*
+
+## Build tool stand alone files
+**/*.fdb_latexmk
+**/*.synctex
+**/*.synctex(busy)
+**/*.synctex.gz
+**/*.synctex.gz(busy)
+**/*.pdfsync
+
+## Bibliography and index auxiliaries
+**/*.bbl
+**/*.blg
+**/*.ind
+**/*.idx
+**/*.ilg
+**/*.inx
+**/*.bcf
+**/*.run.xml
+
+**/TFG_Tipo_I_Software/*.pdf
+**/TFG_Tipo_II_Investigacion/*.pdf

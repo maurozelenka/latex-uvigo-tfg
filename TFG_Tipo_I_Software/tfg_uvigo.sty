@@ -1,0 +1,95 @@
+\ProvidesPackage{tfg_uvigo}
+
+% Codificación e lingua
+% IMPORTANTE: O último idioma na lista de Babel é o principal do documento.
+%   - Para redactar en GALEGO (por defecto): \usepackage[spanish,galician]{babel}
+%   - Para redactar en CASTELÁN: cambiar a  \usepackage[galician,spanish]{babel}
+%     e descomentar as redefinicións de \captionsspanish máis abaixo.
+\usepackage[spanish,galician]{babel}
+\addto\captionsgalician{
+  \renewcommand{\contentsname}{Índice Xeral}
+  \renewcommand{\listfigurename}{Índice de Ilustracións}
+  \renewcommand{\listtablename}{Índice de Táboas}
+}
+% Descomentar estas liñas se o idioma principal é o Castelán:
+% \addto\captionsspanish{
+%   \renewcommand{\contentsname}{Índice General}
+%   \renewcommand{\listfigurename}{Índice de Figuras}
+%   \renewcommand{\listtablename}{Índice de Tablas}
+% }
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{setspace}
+\usepackage{booktabs}
+\usepackage{listings}
+\usepackage{bookmark}
+\usepackage{newtxtext,newtxmath}  % Tipografía Times moderna (substitúe a mathptmx obsoleto)
+
+% Bibliografía con biblatex (backend biber)
+% Para compilar: pdflatex -> biber -> pdflatex -> pdflatex
+\usepackage[backend=biber, style=numeric, sorting=nyt]{biblatex}
+\addbibresource{bibliografia.bib}
+
+% Colores corporativos UVigo
+\definecolor{UVigoBlue}{HTML}{005baa}
+
+% Configuración de márgenes
+\geometry{
+    a4paper,
+    total={150mm,237mm},
+    left=30mm,
+    top=30mm,
+    headheight=15pt,
+}
+
+% Eliminar páginas en blanco automáticas
+\let\cleardoublepage\clearpage
+
+\onehalfspacing
+\parskip=6pt
+\parindent=10pt
+
+% Cabeceras y pies
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LO,RE]{\nouppercase{\leftmark}} % Capítulo a la izquierda
+\fancyhead[RO,LE]{\fontsize{9}{11}\selectfont \corto} % Título a la derecha (más pequeño)
+\fancyfoot[C]{\thepage} % Número de página abajo en el centro
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Formato de capítulos (solo título, con espaciado moderno)
+\titleformat{\chapter}[block]
+  {\normalfont\huge\bfseries}
+  {}{0pt}{\Huge}
+\titlespacing*{\chapter}{0pt}{25pt}{20pt}
+
+% Página en blanco
+\newcommand{\pageblank}{
+    \newpage
+    \thispagestyle{empty}
+    \mbox{}
+    \newpage
+}
+
+% Estilo para tablas de tecnologías
+\newcommand{\techtable}[2]{
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{@{}ll@{}}
+            \toprule
+            \textbf{Área} & \textbf{Tecnoloxía Principal} \\
+            \midrule
+            #1
+            \bottomrule
+        \end{tabular}
+        \caption{#2}
+    \end{table}
+}

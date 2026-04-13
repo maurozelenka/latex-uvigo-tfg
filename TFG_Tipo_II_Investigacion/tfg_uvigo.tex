@@ -1,0 +1,79 @@
+% TFG Tipo II: Traballo sen desenvolvemento de software nin hardware
+% Template: UVigo (ESEI Ourense)
+
+\documentclass[a4paper,11pt,twoside,openany]{book}
+
+%% Estilo TFG UVigo (ESEI)
+\usepackage{tfg_uvigo}
+
+%% Metadata / Macros
+\newcommand{\curso}{Grao en Enxeñaría Informática}
+\newcommand{\proyecto}{Traballo Fin de Grao}
+\newcommand{\universidad}{Universidade de Vigo}
+\newcommand{\centro}{Escola Superior de Enxeñaría Informática}
+\newcommand{\unicentro}{\centro\ da \universidad}
+\newcommand{\titulo}{Título do Traballo de Fin de Grao (Tipo II)}
+\newcommand{\autor}{Nome Alumna/o}
+\newcommand{\director}{Nome do Director}
+\newcommand{\tutor}{Nome do Titor/a}
+\newcommand{\corto}{Título Curto}
+\newcommand{\palabras}{Palabra1, Palabra2, Palabra3}
+
+\hypersetup{
+    pdftitle={\corto},
+    pdfauthor={\autor},
+    pdfsubject={\titulo},
+    pdfkeywords={\palabras},
+    hidelinks,
+    pdfencoding=auto,
+    psdextra,
+    hypertexnames=false
+}
+
+\begin{document}
+  \graphicspath{{./src/images/}}
+  
+  % Portada ESEI
+  \include{src/tfg_portada}
+  
+  \frontmatter
+  \pagenumbering{roman}
+  \pagestyle{plain}
+  % Dedicatoria (Opcional)
+  \include{src/tfg_dedicatoria}
+
+  % Agradecementos (Opcional)
+  \include{src/tfg_agradecimientos}
+
+  % Resumo e Abstract
+  \include{src/tfg_resumen_abstract}
+  
+  \markboth{}{}
+  
+  % Índices
+  \tableofcontents
+  \listoffigures
+  \listoftables
+  \clearpage
+  \markboth{}{}
+  
+  % Contenido principal (Tipo II)
+  \mainmatter
+  \pagestyle{fancy}
+  \include{src/chapters/introduccion}        % 5.7
+  
+  \include{src/chapters/objetivos}            % 5.8
+  \include{src/chapters/contexto}             % 5.9 (Antecedentes e contexto)
+  \include{src/chapters/solucion}             % 5.10 (Resumo da solución proposta)
+  \include{src/chapters/marco_teorico}        % 5.11
+  \include{src/chapters/planificacion}        % 5.12
+  \include{src/chapters/aportaciones}         % 5.13
+  \include{src/chapters/conclusiones}          % 5.14
+  \include{src/chapters/traballo_futuro}      % 5.15
+  \include{src/chapters/referencias}          % 5.16
+  
+  % Anexos (Opcional)
+  \appendix
+  \include{src/chapters/anexos}               % 5.17
+  
+\end{document}
