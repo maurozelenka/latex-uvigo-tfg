@@ -27,6 +27,9 @@ El proyecto se divide en dos carpetas autónomas. Elige la que corresponda a tu 
 ## 🚀 Cómo empezar
 
 1. **Clona el repositorio**:
+   ```bash
+   git clone https://github.com/maurozelenka/latex-uvigo-tfg.git
+   ```
 2. Abre la carpeta correspondiente a tu tipo de TFG.
 3. Edita la metadata (Título, Autor, Tutor) en el archivo `tfg_uvigo.tex`.
 4. Escribe tu contenido en los archivos dentro de `src/chapters/`.
