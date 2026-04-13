@@ -148,4 +148,10 @@ Si revisas el `Makefile` o los comandos manuales, verás que procesamos el docum
 
 ---
 
-*¡Espero que tengas suerte desarrollando tu TFG!* 
+## 📄 Licencia
+
+Este proyecto está bajo la licencia **MIT** - consulta el archivo [LICENSE](LICENSE) para más detalles.
+
+---
+
+*¡Espero que tengas suerte desarrollando tu TFG!* 🎓✨
